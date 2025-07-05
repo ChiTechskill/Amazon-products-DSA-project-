@@ -60,20 +60,59 @@ Revenue Potential Fields (Derived Columns)
 
 #	Task Description	Excel Tools/Logic Used
 
-1	Average discount % by product category	Pivot Table + AVERAGE
-2	Number of products in each category	Pivot Table + COUNT
-3	Total number of reviews per category	SUM of Rating Count
-4	Products with highest average ratings	Sorting by Average Rating
-5	Actual vs discounted price by category	Grouped Bar Chart
+1	Average discount % by product category
+
+Pivot Table + AVERAGE
+
+2	Number of products in each category	
+
+Pivot Table + COUNT
+
+3	Total number of reviews per category	
+
+SUM of Rating Count
+
+4	Products with highest average
+
+ratings	Sorting by Average Rating
+
+5	Actual vs discounted price by category
+
+Grouped Bar Chart
+
 6	Products with the most reviews	Top-N Sorting in Pivot
-7	Products with ≥ 50% discount	Filter + COUNTIF
-8	Rating distribution	Histogram via Pivot Count
-9	Revenue per category	New Column (Price × Count)
-10	Products by price range	IF Logic + Donut Chart
-11	Rating vs Discount	Dual-Axis Scatter Line Chart
-12	Products with < 1,000 reviews	COUNTIF + Bar Chart
-13	Highest average discount by category	Sorted Pivot Table
-14	Top 5 products by rating × reviews	Ranking Logic
+
+7	Products with ≥ 50% discount	
+
+Filter + COUNTIF
+
+8	Rating distribution	Histogram 
+
+via Pivot Count
+
+9	Revenue per category	New Column 
+
+(Price × Count)
+
+10	Products by price range	
+
+IF Logic + Donut Chart
+
+11	Rating vs Discount	
+
+Dual-Axis Scatter Line Chart
+
+12	Products with < 1,000 reviews	
+
+COUNTIF + Bar Chart
+
+13	Highest average discount by 
+category
+Sorted Pivot Table
+
+14	Top 5 products by rating × reviews	
+
+Ranking Logic
 
 
 
@@ -176,7 +215,7 @@ Named Ranges
 👨‍💻 About Me
 
 Maduforo Chima Isaac
-🎓 Data Enthusiast | 📊 Excel Analyst | 🎶 Music Lover & Entrepreneur (Madu Sound Hub)
+🎓 Data Enthusiast | 📊 Excel Analyst | Entrepreneur (Madu Sound Hub). 
 I’m passionate about transforming messy data into clear, useful visuals. This project reflects my growth in Excel analysis and storytelling with data.
 
 
@@ -184,11 +223,11 @@ I’m passionate about transforming messy data into clear, useful visuals. This 
 
 📫 Contact
 
-Email: madusoundhub@gmail.com
+Email: chimexfur@gmail.com
 
-Phone: +234 [Your Phone Number]
+Phone: +234 91 5097 2420 
 
-GitHub: github.com/MaduSoundHub
+GitHub:https://github.com/ChiTechskill/Amazon-products-DSA-project-.git
 
 
 
