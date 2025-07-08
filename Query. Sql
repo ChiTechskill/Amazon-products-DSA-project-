@@ -1,0 +1,79 @@
+ View all data
+SELECT * FROM KMS_CaseStudy;
+
+-- Top Product Category
+SELECT TOP 1 Product_Category, COUNT(Product_Category) AS [Product Count]
+FROM KMS_CaseStudy
+GROUP BY Product_Category
+ORDER BY [Product Count] DESC;
+
+-- Top 3 Regions (High)
+SELECT TOP 3 Region, SUM(Sales) AS [Total Sales]
+FROM KMS_CaseStudy
+GROUP BY Region
+ORDER BY [Total Sales] DESC;
+
+-- Top 3 Regions (Low)
+SELECT TOP 3 Region, SUM(Sales) AS [Total Sales]
+FROM KMS_CaseStudy
+GROUP BY Region
+ORDER BY [Total Sales] ASC;
+
+-- Ontario Region Sales
+SELECT Region, SUM(Sales) AS [Total Sales]
+FROM KMS_CaseStudy
+WHERE Region = 'Ontario'
+GROUP BY Region;
+
+-- Bottom 10 Customers
+SELECT TOP 10 Customer_Name, SUM(Sales) AS [Total Sales]
+FROM KMS_CaseStudy
+GROUP BY Customer_Name
+ORDER BY [Total Sales] ASC;
+
+-- Most Expensive Ship Mode
+SELECT TOP 1 Ship_Mode, SUM(Shipping_Cost) AS [Total Shipping Cost]
+FROM KMS_CaseStudy
+GROUP BY Ship_Mode
+ORDER BY [Total Shipping Cost] DESC;
+
+-- Sales per Product per Customer
+SELECT Customer_Name, Product_Name, SUM(Sales) AS [Total Sales]
+FROM KMS_CaseStudy
+GROUP BY Customer_Name, Product_Name
+ORDER BY [Total Sales] DESC;
+
+-- Top Small Business Customer
+SELECT TOP 1 Customer_Name, Customer_Segment, SUM(Sales) AS [Total Sales]
+FROM KMS_CaseStudy
+WHERE Customer_Segment = 'Small Business'
+GROUP BY Customer_Name, Customer_Segment
+ORDER BY [Total Sales] DESC;
+
+-- Top Corporate Customer by Orders (2009-2012)
+SELECT TOP 1 Customer_Name, Customer_Segment, COUNT(Order_ID) AS [Total Orders]
+FROM KMS_CaseStudy
+WHERE Customer_Segment = 'Corporate' AND YEAR(Order_Date) BETWEEN 2009 AND 2012
+GROUP BY Customer_Name, Customer_Segment
+ORDER BY [Total Orders] DESC;
+
+-- Top Consumer Customer by Profit
+SELECT TOP 1 Customer_Name, Customer_Segment, SUM(Profit) AS [Total Profit]
+FROM KMS_CaseStudy
+WHERE Customer_Segment = 'Consumer'
+GROUP BY Customer_Name, Customer_Segment
+ORDER BY [Total Profit] DESC;
+
+-- Customer + Order Status JOIN
+SELECT kc.Customer_Name, kc.Customer_Segment, os.Status
+FROM KMS_CaseStudy kc
+JOIN Order_Status os ON kc.Order_ID = os.Order_ID;
+
+-- Shipping Analysis by Order Priority
+SELECT Order_Priority, Ship_Mode,
+       COUNT(Order_ID) AS [Order Count],
+       SUM(Sales - Profit) AS [Estimated Shipping Cost],
+       AVG(DATEDIFF(DAY, Order_Date, Ship_Date)) AS [Avg Ship Time (Days)]
+FROM KMS_CaseStudy
+GROUP BY Order_Priority, Ship_Mode
+ORDER BY Order_Priority, Ship_Mode;
