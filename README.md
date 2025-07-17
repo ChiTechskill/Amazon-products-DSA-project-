@@ -208,8 +208,9 @@ PROJECT 2
 
 📫 Contact
 Email: chimexfur@gmail.com
-Phone: +234 91 5097 2420 
-GitHub:https://github.com/ChiTechskill/Amazon-products-DSA-project-.git
+Phone: +2349150972420,09017145288
+GitHub:https://github.com/ChiTechskill
+
 ---
 
 
