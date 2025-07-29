@@ -1,4 +1,3 @@
-KiPROJECT 1
 # Amazon-products-DSA-project-
 
 🛍️ Amazon Product Review Analysis 
